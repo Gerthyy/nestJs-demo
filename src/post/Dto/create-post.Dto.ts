@@ -4,7 +4,6 @@ import { IsNotEmpty } from 'class-validator';
 export class CreatePostDto {
   @ApiProperty({ description: 'titlt' })
   @IsNotEmpty({ message: 'title is not empty' })
-  @Is
   title: string;
 
   @ApiProperty({ description: 'content' })
@@ -14,5 +13,5 @@ export class CreatePostDto {
   createDate: Date;
 
   @ApiProperty({ default: null })
-  dataObj: Object;
+  dataObj: any;
 }
